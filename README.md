@@ -1,16 +1,6 @@
 ### Introduction
 
-- Fork this repo to build your own image with ERPNext and list of custom Frappe apps.
-- Change `nginx/Dockerfile` and add required apps. Refer comments in the file.
-- Change `worker/Dockerfile` and add required apps.
-
-Example file uses following apps:
-
-- https://github.com/yrestom/POS-Awesome
-- https://github.com/zerodha/frappe-attachments-s3
-- https://github.com/pipech/frappe-metabase
-- https://github.com/franknyarkoh/bookings
-- https://github.com/frappe/bench_manager
+Docker images required for z1n deployment.
 
 ### Build images
 

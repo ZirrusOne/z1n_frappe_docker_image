@@ -1,6 +1,5 @@
-ARG FRAPPE_BRANCH=develop
+ARG FRAPPE_BRANCH=v13.15.1
 FROM node:14-buster
-ARG FRAPPE_BRANCH=develop
 
 COPY install_frappe.sh /install_frappe
 COPY install_erpnext.sh /install_erpnext
@@ -13,11 +12,7 @@ RUN /install_frappe ${FRAPPE_BRANCH} && \
   /install_erpnext && \
   # Install required apps with following command
   # /install_app <app_name> <repo> <app_branch>
-  /install_app posawesome https://github.com/yrestom/POS-Awesome master && \
-  /install_app frappe_s3_attachment https://github.com/zerodha/frappe-attachments-s3 master && \
-  /install_app metabase_integration https://github.com/pipech/frappe-metabase master && \
-  /install_app bookings https://github.com/franknyarkoh/bookings master && \
-  /install_app bench_manager https://github.com/frappe/bench_manager develop && \
+  /install_app install_manager https://github.com/ZirrusOne/install_manager develop && \
   # Cleanup for production
   /prepare_production
 
