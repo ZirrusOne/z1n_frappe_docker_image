@@ -36,11 +36,11 @@ jobs:
         with:
           context: nginx
           push: true
-          tags: zirrusone/z1n-erpnext-nginx:v1.0.6
+          tags: zirrusone/z1n-erpnext-nginx:v1.0.7
       -
         name: z1n-erpnext-worker
         uses: docker/build-push-action@v2
         with:
           context: worker
           push: true
-          tags: zirrusone/z1n-erpnext-worker:v1.0.6
+          tags: zirrusone/z1n-erpnext-worker:v1.0.7
