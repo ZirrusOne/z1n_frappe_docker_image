@@ -17,7 +17,7 @@ RUN /install_frappe ${FRAPPE_BRANCH} && \
   # Cleanup for production
   /prepare_production
 
-#FROM frappe/erpnext-nginx:${FRAPPE_BRANCH}
+FROM frappe/erpnext-nginx:${FRAPPE_BRANCH}
 
 #COPY --from=0 /home/frappe/frappe-bench/sites/ /var/www/html/
 #COPY --from=0 /rsync /rsync
