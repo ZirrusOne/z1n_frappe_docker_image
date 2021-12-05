@@ -1,5 +1,6 @@
 ARG FRAPPE_BRANCH=z1
 FROM node:14-buster
+ARG FRAPPE_BRANCH=version-13
 
 COPY install_frappe.sh /install_frappe
 COPY install_erpnext.sh /install_erpnext
@@ -16,9 +17,9 @@ RUN /install_frappe ${FRAPPE_BRANCH} && \
   # Cleanup for production
   /prepare_production
 
-FROM frappe/erpnext-nginx:version-13
+#FROM frappe/erpnext-nginx:${FRAPPE_BRANCH}
 
-COPY --from=0 /home/frappe/frappe-bench/sites/ /var/www/html/
+#COPY --from=0 /home/frappe/frappe-bench/sites/ /var/www/html/
 #COPY --from=0 /rsync /rsync
 
 # Append list of installed to apps.txt
