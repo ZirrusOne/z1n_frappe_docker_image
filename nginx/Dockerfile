@@ -19,7 +19,7 @@ RUN /install_frappe ${FRAPPE_BRANCH} && \
 FROM frappe/erpnext-nginx:version-13
 
 COPY --from=0 /home/frappe/frappe-bench/sites/ /var/www/html/
-COPY --from=0 /rsync /rsync
+#COPY --from=0 /rsync /rsync
 
 # Append list of installed to apps.txt
 RUN echo -n "posawesome\nfrappe_s3_attachment\nmetabase_integration\nbookings\nbench_manager" >> /var/www/html/apps.txt
