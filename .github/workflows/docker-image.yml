@@ -34,15 +34,15 @@ jobs:
         name: Build and push z1n-erpnext-nginx
         uses: docker/build-push-action@v2
         with:
-          context: .
-          file: nginx/Dockerfile
+          context: nginx/
+          file: Dockerfile
           push: true
           tags: zirrusone:v1.0.5
       -
         name: Build and push z1n-erpnext-worker
         uses: docker/build-push-action@v2
         with:
-          context: .
-          file: worker/Dockerfile
+          context: worker/
+          file: Dockerfile
           push: true
           tags: zirrusone:v1.0.5
