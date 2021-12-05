@@ -39,7 +39,7 @@ jobs:
           tags: zirrusone:v1.0.5
       -
         name: Build and push z1n-erpnext-worker
-        uses: build-push-action@v2
+        uses: docker/build-push-action@v2
         with:
           context: worker
           push: true
