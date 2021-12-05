@@ -1,4 +1,4 @@
-name: ci
+name: Z1N CI
 
 on:
   push:
