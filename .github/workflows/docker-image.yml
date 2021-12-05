@@ -3,7 +3,7 @@ name: Z1N CI
 on:
   push:
     branches:
-      - 'master'
+      - 'main'
 
 jobs:
   docker:
