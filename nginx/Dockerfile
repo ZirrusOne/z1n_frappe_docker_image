@@ -23,7 +23,7 @@ RUN /install_frappe ${FRAPPE_BRANCH} && \
 #COPY --from=0 /rsync /rsync
 
 # Append list of installed to apps.txt
-RUN echo -n "posawesome\nfrappe_s3_attachment\nmetabase_integration\nbookings\nbench_manager" >> /var/www/html/apps.txt
+RUN echo -n "install_manager" >> /var/www/html/apps.txt
 
 VOLUME [ "/assets" ]
 
