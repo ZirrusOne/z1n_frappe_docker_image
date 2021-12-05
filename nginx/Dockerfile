@@ -1,6 +1,6 @@
-ARG FRAPPE_BRANCH=v13.15.1
+ARG FRAPPE_BRANCH=z1
 FROM node:14-buster
-ARG FRAPPE_BRANCH=v13.15.1
+ARG FRAPPE_BRANCH=version-13
 
 COPY install_frappe.sh /install_frappe
 COPY install_erpnext.sh /install_erpnext
